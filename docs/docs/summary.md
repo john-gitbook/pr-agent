@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](index.md)
+* [Introduction](usage-guide/introduction.md)
   * [💎 Qodo Merge](overview/pr_agent_pro.md)
   * [Data Privacy](overview/data_privacy.md)
 
