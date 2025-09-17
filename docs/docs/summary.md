@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](index.md)
+* [Overview](../README.md)
 * [Introduction](usage-guide/introduction.md)
   * [💎 Qodo Merge](overview/pr_agent_pro.md)
   * [Data Privacy](overview/data_privacy.md)
@@ -14,7 +14,7 @@
 ## Usage Guide
 
 * [Usage Guide](usage-guide/index.md)
-* [Introduction](usage-guide/introduction.md)
+*
 * [Enabling a Wiki](usage-guide/enabling_a_wiki.md)
 * [Configuration File](usage-guide/configuration_options.md)
 * [Usage and Automation](usage-guide/automations_and_usage.md)

@@ -1,57 +1,64 @@
+# 💎 Implement
+
 `Platforms supported: GitHub, GitLab, Bitbucket`
 
-## Overview
+### Overview
 
-The `implement` tool converts human code review discussions and feedback into ready-to-commit code changes.
-It leverages LLM technology to transform PR comments and review suggestions into concrete implementation code, helping developers quickly turn feedback into working solutions.
+The `implement` tool converts human code review discussions and feedback into ready-to-commit code changes. It leverages LLM technology to transform PR comments and review suggestions into concrete implementation code, helping developers quickly turn feedback into working solutions.
 
-## Usage Scenarios
+### Usage Scenarios
 
-=== "For Reviewers"
+\=== "For Reviewers"
 
-    Reviewers can request code changes by:
+````
+Reviewers can request code changes by:
 
-    1. Selecting the code block to be modified.
-    2. Adding a comment with the syntax:
+1. Selecting the code block to be modified.
+2. Adding a comment with the syntax:
 
-    ```
-    /implement <code-change-description>
-    ```
+```
+/implement <code-change-description>
+```
 
-    ![implement1](https://codium.ai/images/pr_agent/implement1.png){width=640}
+![implement1](https://codium.ai/images/pr_agent/implement1.png){width=640}
+````
 
-=== "For PR Authors"
+\=== "For PR Authors"
 
-    PR authors can implement suggested changes by replying to a review comment using either:
+````
+PR authors can implement suggested changes by replying to a review comment using either:
 
-    1. Add specific implementation details as described above
+1. Add specific implementation details as described above
 
-    ```
-    /implement <code-change-description>
-    ```
+```
+/implement <code-change-description>
+```
 
-    2. Use the original review comment as instructions
+2. Use the original review comment as instructions
 
-    ```
-    /implement
-    ```
+```
+/implement
+```
 
-    ![implement2](https://codium.ai/images/pr_agent/implement2.png){width=640}
+![implement2](https://codium.ai/images/pr_agent/implement2.png){width=640}
+````
 
-=== "For Referencing Comments"
+\=== "For Referencing Comments"
 
-    You can reference and implement changes from any comment by:
+````
+You can reference and implement changes from any comment by:
 
-    ```
-    /implement <link-to-an-inline-comment>
-    ```
+```
+/implement <link-to-an-inline-comment>
+```
 
-    ![implement3](https://codium.ai/images/pr_agent/implement3.png){width=640}
+![implement3](https://codium.ai/images/pr_agent/implement3.png){width=640}
 
-    Note that the implementation will occur within the review discussion thread.
+Note that the implementation will occur within the review discussion thread.
+````
 
-## Configuration options
+### Configuration options
 
-- Use `/implement` to implement code change within and based on the review discussion.
-- Use `/implement <code-change-description>` inside a review discussion to implement specific instructions.
-- Use `/implement <link-to-an-inline-comment>` to respond to an inline comment by triggering the tool from anywhere in the thread.
+* Use `/implement` to implement code change within and based on the review discussion.
+* Use `/implement <code-change-description>` inside a review discussion to implement specific instructions.
+* Use `/implement <link-to-an-inline-comment>` to respond to an inline comment by triggering the tool from anywhere in the thread.

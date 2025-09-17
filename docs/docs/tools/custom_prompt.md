@@ -1,7 +1,8 @@
-## Overview
+# 💎 Custom Prompt
 
-The `custom_prompt` tool scans the PR code changes, and automatically generates suggestions for improving the PR code.
-It shares similarities with the `improve` tool, but with one main difference: the `custom_prompt` tool will **only propose suggestions that follow specific guidelines defined by the prompt** in: `pr_custom_prompt.prompt` configuration.
+### Overview
+
+The `custom_prompt` tool scans the PR code changes, and automatically generates suggestions for improving the PR code. It shares similarities with the `improve` tool, but with one main difference: the `custom_prompt` tool will **only propose suggestions that follow specific guidelines defined by the prompt** in: `pr_custom_prompt.prompt` configuration.
 
 The tool can be triggered [automatically](../usage-guide/automations_and_usage.md#github-app-automatic-tools-when-a-new-pr-is-opened) every time a new PR is opened, or can be invoked manually by commenting on a PR.
 
@@ -28,10 +29,10 @@ The suggestions should focus only on the following:
 """
 ```
 
-Remember - with this tool, you are the prompter. Be specific, clear, and concise in the instructions. Specify relevant aspects that you want the model to focus on. \
+Remember - with this tool, you are the prompter. Be specific, clear, and concise in the instructions. Specify relevant aspects that you want the model to focus on.\
 You might benefit from several trial-and-error iterations, until you get the correct prompt for your use case.
 
-## Example usage
+### Example usage
 
 Here is an example of a possible prompt, defined in the configuration file:
 
@@ -51,10 +52,8 @@ Results obtained with the prompt above:
 
 ![Custom prompt results](https://codium.ai/images/pr_agent/custom_suggestions_result.png){width=768}
 
-## Configuration options
+### Configuration options
 
-- `prompt`: the prompt for the tool. It should be a multi-line string.
-
-- `num_code_suggestions_per_chunk`: number of code suggestions provided by the 'custom_prompt' tool, per chunk. Default is 3.
-
-- `enable_help_text`: if set to true, the tool will display a help text in the comment. Default is true.
+* `prompt`: the prompt for the tool. It should be a multi-line string.
+* `num_code_suggestions_per_chunk`: number of code suggestions provided by the 'custom\_prompt' tool, per chunk. Default is 3.
+* `enable_help_text`: if set to true, the tool will display a help text in the comment. Default is true.

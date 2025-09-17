@@ -1,4 +1,6 @@
-## Overview
+# 💎 Add Documentation
+
+### Overview
 
 The `add_docs` tool scans the PR code changes, and automatically suggests documentation for any code components that changed in the PR (functions, classes, etc.).
 
@@ -8,7 +10,7 @@ It can be invoked manually by commenting on any PR:
 /add_docs
 ```
 
-## Example usage
+### Example usage
 
 Invoke the tool manually by commenting `/add_docs` on any PR:
 
@@ -26,14 +28,13 @@ You can state a name of a specific component in the PR to get documentation only
 /add_docs component_name
 ```
 
-## Manual triggering
+### Manual triggering
 
 Comment `/add_docs` on a PR to invoke it manually.
 
-## Automatic triggering
+### Automatic triggering
 
 To automatically run the `add_docs` tool when a pull request is opened, define in a [configuration file](https://qodo-merge-docs.qodo.ai/usage-guide/configuration_options/):
-
 
 ```toml
 [github_app]
@@ -43,14 +44,11 @@ pr_commands = [
 ]
 ```
 
-The `pr_commands` list defines commands that run automatically when a PR is opened.
-Since this is under the [github_app] section, it only applies when using the Qodo Merge GitHub App in GitHub environments.
+The `pr_commands` list defines commands that run automatically when a PR is opened. Since this is under the \[github\_app] section, it only applies when using the Qodo Merge GitHub App in GitHub environments.
 
-## Configuration options
+### Configuration options
 
-- `docs_style`: The exact style of the documentation (for python docstring). you can choose between: `google`, `numpy`, `sphinx`, `restructuredtext`, `plain`. Default is `sphinx`.
-- `extra_instructions`: Optional extra instructions to the tool. For example: "focus on the changes in the file X. Ignore change in ...".
+* `docs_style`: The exact style of the documentation (for python docstring). you can choose between: `google`, `numpy`, `sphinx`, `restructuredtext`, `plain`. Default is `sphinx`.
+* `extra_instructions`: Optional extra instructions to the tool. For example: "focus on the changes in the file X. Ignore change in ...".
 
-!!! note "Notes"
-    - The following languages are currently supported: `Python, Java, C++, JavaScript, TypeScript, C#, Go, Ruby, PHP, Rust, Kotlin, Scala`
-    - This tool can also be triggered interactively by using the [`analyze`](./analyze.md) tool.
+!!! note "Notes" - The following languages are currently supported: `Python, Java, C++, JavaScript, TypeScript, C#, Go, Ruby, PHP, Rust, Kotlin, Scala` - This tool can also be triggered interactively by using the [`analyze`](analyze.md) tool.

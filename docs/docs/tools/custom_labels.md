@@ -1,6 +1,8 @@
+# 💎 Generate Labels
+
 `Platforms supported: GitHub, GitLab`
 
-## Overview
+### Overview
 
 The `generate_labels` tool scans the PR code changes, and given a list of labels and their descriptions, it automatically suggests labels that match the PR code changes.
 
@@ -10,7 +12,7 @@ It can be invoked manually by commenting on any PR:
 /generate_labels
 ```
 
-## Example usage
+### Example usage
 
 If we wish to add detect changes to SQL queries in a given PR, we can add the following custom label along with its description:
 
@@ -22,19 +24,19 @@ When running the `generate_labels` tool on a PR that includes changes in SQL que
 
 Note that in addition to the dedicated tool `generate_labels`, the custom labels will also be used by the `describe` tool.
 
-### How to enable custom labels
+#### How to enable custom labels
 
 There are 3 ways to enable custom labels:
 
-#### 1. CLI (local configuration file)
+**1. CLI (local configuration file)**
 
-When working from CLI, you need to apply the [configuration changes](#configuration-options) to the [custom_labels file](https://github.com/Codium-ai/pr-agent/blob/main/pr_agent/settings/custom_labels.toml):
+When working from CLI, you need to apply the [configuration changes](custom_labels.md#configuration-options) to the [custom\_labels file](https://github.com/Codium-ai/pr-agent/blob/main/pr_agent/settings/custom_labels.toml):
 
-#### 2. Repo configuration file
+**2. Repo configuration file**
 
-To enable custom labels, you need to apply the [configuration changes](#configuration-options) to the local `.pr_agent.toml` file in your repository.
+To enable custom labels, you need to apply the [configuration changes](custom_labels.md#configuration-options) to the local `.pr_agent.toml` file in your repository.
 
-#### 3. Handle custom labels from the Repo's labels page 💎
+**3. Handle custom labels from the Repo's labels page 💎**
 
 > This feature is available only in Qodo Merge
 
@@ -44,8 +46,8 @@ To enable custom labels, you need to apply the [configuration changes](#configur
 b. Add/edit the custom labels. It should be formatted as follows:
 
 * Label name: The name of the custom label.
-* Description: Start the description of with prefix `pr_agent:`, for example: `pr_agent: Description of when AI should suggest this label`.<br>
-The description should be comprehensive and detailed, indicating when to add the desired label.
+* Description: Start the description of with prefix `pr_agent:`, for example: `pr_agent: Description of when AI should suggest this label`.\
+  The description should be comprehensive and detailed, indicating when to add the desired label.
 
 ![Add native custom labels](https://codium.ai/images/pr_agent/add_native_custom_labels.png){width=880}
 
@@ -53,9 +55,9 @@ c. Now the custom labels will be included in the `generate_labels` tool.
 
 > This feature is supported in GitHub and GitLab.
 
-## Configuration options
+### Configuration options
 
-* Change `enable_custom_labels` to True: This will turn off the default labels and enable the custom labels provided in the custom_labels.toml file.
+* Change `enable_custom_labels` to True: This will turn off the default labels and enable the custom labels provided in the custom\_labels.toml file.
 * Add the custom labels. It should be formatted as follows:
 
 ```
@@ -69,6 +71,4 @@ description = "Description of when AI should suggest this label"
 description = "Description of when AI should suggest this label 2"
 ```
 
-???+ tip "Auto-remove custom label when no longer relevant"
-    If the custom label is no longer relevant, it will be automatically removed from the PR by running the `generate_labels` tool or the `describe` tool.
-
+???+ tip "Auto-remove custom label when no longer relevant" If the custom label is no longer relevant, it will be automatically removed from the PR by running the `generate_labels` tool or the `describe` tool.

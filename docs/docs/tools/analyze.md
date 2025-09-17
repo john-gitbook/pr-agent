@@ -1,4 +1,6 @@
-## Overview
+# 💎 Analyze
+
+### Overview
 
 The `analyze` tool combines advanced static code analysis with LLM capabilities to provide a comprehensive analysis of the PR code changes.
 
@@ -10,11 +12,10 @@ It can be invoked manually by commenting on any PR:
 /analyze
 ```
 
-## Example usage
+### Example usage
 
 An example result:
 
 ![Analyze 1](https://codium.ai/images/pr_agent/analyze_1.png){width=750}
 
-!!! note "Language that are currently supported:"
-    Python, Java, C++, JavaScript, TypeScript, C#, Go, Ruby, PHP, Rust, Kotlin, Scala
+!!! note "Language that are currently supported:" Python, Java, C++, JavaScript, TypeScript, C#, Go, Ruby, PHP, Rust, Kotlin, Scala
